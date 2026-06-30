@@ -119,6 +119,30 @@ nav.scrolled{
 
 .hero-content{position:relative;z-index:2}
 
+.hero-photo{
+  width: 280px;
+  height: 380px;
+  margin: 0 auto 40px;
+  border-radius: 140px 140px 20px 20px;
+  overflow: hidden;
+  border: 2px solid rgba(168,121,42,.25);
+  box-shadow: 0 20px 60px rgba(168,121,42,.15);
+}
+
+.hero-photo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media(max-width:700px){
+  .hero-photo{
+    width: 220px;
+    height: 300px;
+  }
+}
+
 .hero-pre{
   font-size:.6rem;letter-spacing:.5em;text-transform:uppercase;
   color:var(--gold2);margin-bottom:3rem;
@@ -442,6 +466,9 @@ footer{
   <div class="vline vline-r"></div>
 
   <div class="hero-content">
+    <div class="hero-photo">
+    <img src="novios.jpg" alt="Ivonne y Fernando">
+</div>
     <p class="hero-pre">Con la bendición de Dios los invitamos a celebrar</p>
     <h1 class="hero-names">
       Ivonne
