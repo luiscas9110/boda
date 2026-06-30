@@ -117,7 +117,45 @@ nav.scrolled{
 }
 .vline-l{left:10%}.vline-r{right:10%}
 
-.hero-content{position:relative;z-index:2}
+.hero-content{.hero-layout{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:80px;
+    flex-wrap:wrap;
+}
+
+.hero-photo{
+    width:420px;
+    height:560px;
+    overflow:hidden;
+    border-radius:220px 220px 20px 20px;
+    border:2px solid rgba(168,121,42,.25);
+    box-shadow:0 25px 60px rgba(168,121,42,.15);
+}
+
+.hero-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-text{
+    max-width:600px;
+}
+
+@media(max-width:900px){
+
+    .hero-layout{
+        flex-direction:column;
+        gap:40px;
+    }
+
+    .hero-photo{
+        width:280px;
+        height:380px;
+    }
+}}
 
 .hero-photo{
   width: 280px;
@@ -465,24 +503,34 @@ footer{
   <div class="vline vline-l"></div>
   <div class="vline vline-r"></div>
 
-  <div class="hero-content">
+  <div class="hero-content hero-layout">
+
     <div class="hero-photo">
-    <img src="novios.jpg" alt="Ivonne y Fernando">
-</div>
-    <p class="hero-pre">Con la bendición de Dios los invitamos a celebrar</p>
-    <h1 class="hero-names">
-      Ivonne
-      <span class="hero-connector">y</span>
-      Fernando
-    </h1>
-    <div class="hero-ornament">
-      <div class="orn-line"></div>
-      <div class="orn-diamond"></div>
-      <div class="orn-line r"></div>
+        <img src="novios.jpeg" alt="Ivonne y Fernando">
     </div>
-    <p class="hero-date">Sábado, 05 de Diciembre de 2026</p>
-    <p class="hero-sub">Girardota · Antioquia · Colombia</p>
-  </div>
+
+    <div class="hero-text">
+        <p class="hero-pre">
+            Con la bendición de Dios los invitamos a celebrar
+        </p>
+
+        <h1 class="hero-names">
+            Ivonne
+            <span class="hero-connector">y</span>
+            Fernando
+        </h1>
+
+        <div class="hero-ornament">
+            <div class="orn-line"></div>
+            <div class="orn-diamond"></div>
+            <div class="orn-line r"></div>
+        </div>
+
+        <p class="hero-date">Sábado, 05 de Diciembre de 2026</p>
+        <p class="hero-sub">Girardota · Antioquia · Colombia</p>
+    </div>
+
+</div>
 
   <div class="hero-scroll">
     <span>Descubrir</span>
